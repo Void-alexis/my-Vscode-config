@@ -1,0 +1,135 @@
+{
+    /*
+        ==================================================
+        --------------------------------------------------
+        ------------- DEFAULT PRESET SETTINGS -=----------
+        --------------------------------------------------
+        ==================================================
+    */
+
+    //  ------------ vscode animation effect configuration -----------
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/alexis/.vscode/extensions/be5invis.vscode-custom-css-7.4.2/src/index.js"
+    ],
+    
+    //  ----------- background configuration ---------
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "background-position": "center",
+            "background-size": "cover",
+            "opacity": 0.2
+        },
+        "images": [
+            "file:///D:/Users/wallpaper/selective-coloring-black-background-dark-background-simple-background-anime-girls-2238498-wallhere.com.jpg"
+        ],
+        "interval": 0,
+        "random": false
+    },
+
+    //  --------- vim configuration ------------
+
+    // enable vim System Clipboard
+    "vim.useSystemClipboard": true,
+    
+    //  highlight matched text
+    "vim.hlsearch": false,
+
+    //  enable highlighting when yanking
+    "vim.highlightedyank.enable": true,
+
+    //  keybinding remapping (non-recursive)
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+    ], 
+
+    //  --------- vscode system settings configuration --------
+
+    //  font size
+    "editor.fontSize": 20,
+
+    //  enable mouseWheelZoom 
+    "editor.mouseWheelZoom": true,
+
+    //  enable relative lineNumber
+    "editor.lineNumbers": "relative",
+
+    "editor.inlineSuggest.enabled": true,
+
+    //  background color for highlight of line at cursor position
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#000000",
+        "gitlens.trailingLineBackgroundColor":"#000000",
+        "gitlens.trailingLineForegroundColor": "#2bff00df",
+        "editorHoverWidget.foreground": "#fff",
+        "editorHoverWidget.border": "#00ffee9e",
+        "editorSuggestWidget.background": "#000000",
+        "editorSuggestWidget.selectedForeground": "#000000",
+        "editorSuggestWidget.focusHighlightForeground": "#0000ff",
+        "editorSuggestWidget.selectedBackground": "#c9c2c2",
+        "editorHoverWidget.highlightForeground": "#f60000",
+    },
+
+    //  terminal settings
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+
+    //  file icon theme
+    "workbench.iconTheme": "material-icon-theme",
+
+    //  color theme
+    "workbench.colorTheme": "Gruvbox Dark Soft",
+
+    //  --------- cmake configuration ----------
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+
+    "cmake.additionalCompilerSearchDirs": [
+        "D:\\Development\\mingw64\\bin"
+    ],
+
+    //  ---------- Power Mode configuration ----------
+    "powermode.shake.enabled": false,
+    "powermode.enabled": true,
+    "powermode.presets": "particles",
+    "powermode.combo.location": "off",
+    "powermode.explosions.offset": 0.25,
+
+    //  ------------- gitlens configuration -------------
+    "gitlens.codeLens.scopes": [
+        "containers",
+        "blocks",
+        "document"
+    ],
+    "gitlens.heatmap.locations": [
+        "gutter",
+        "overview"
+    ],
+    "gitlens.changes.locations": [
+        "gutter",
+        "overview"
+    ],
+
+    /*
+        ====================================================
+        ----------------------------------------------------
+        -------------- FOR JAVA-WEB DEVELOPMENT -------------
+        ----------------------------------------------------
+        ====================================================
+    */
+
+    //  -------------- live server configuration ------------
+    "liveServer.settings.donotVerifyTags": true,
+    "custom-ui-style.external.imports": [
+        "file:///c:/Users/alexis/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
+    "animations.Install-Method": "Custom UI Style",
+}

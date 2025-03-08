@@ -1,0 +1,39 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    // key bindings versionc: 1.0.0
+
+    { // 大小写设置
+        "key": "ctrl+shift+u",
+        "command": "editor.action.transformToUppercase",
+        "when": "editorHasSelection"
+    },
+    { // 终端/工作区互跳
+        "key": "alt+y",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "terminalFocus",
+    },
+    { // 终端/工作区互跳
+        "key": "alt+y",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus",
+    },
+    { // 输出/工作区跳转
+        "key": "alt+y",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "inOutput",
+    },
+    { // 侧边栏/工作区跳转
+        "key": "ctrl+l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "sideBarFocus",
+    },
+    { // 关闭标签
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+i",
+        "command": "workbench.view.extension.gitlensPanel"
+    }
+]
