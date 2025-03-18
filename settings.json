@@ -11,6 +11,13 @@
     "vscode_custom_css.imports": [
         "file:///C:/Users/alexis/.vscode/extensions/be5invis.vscode-custom-css-7.4.2/src/index.js"
     ],
+
+    "animations.Install-Method": "Custom UI Style",
+    
+    // ------------ custom ui style configuration ------------
+    "custom-ui-style.external.imports": [
+        "file:///c:/Users/alexis/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
     
     //  ----------- background configuration ---------
     "background.editor": {
@@ -28,6 +35,7 @@
     },
 
     //  --------- vim configuration ------------
+    
 
     // enable vim System Clipboard
     "vim.useSystemClipboard": true,
@@ -37,6 +45,31 @@
 
     //  enable highlighting when yanking
     "vim.highlightedyank.enable": true,
+    
+    // set yanked color duration
+    "vim.highlightedyank.duration": 250,
+
+    /*
+        make :substitute command can toggle all matches in the current line
+        Eg : ':s/foo/bar/g '
+        when 'g' flag added, all match in the current line will be replaced
+        when 'g' flag not added, only the first match in the current line will be replaced
+    */
+    "vim.gdefault": true,
+
+    // set vim status bar color
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#007ACC",
+    "vim.statusBarColors.searchinprogressmode": "#007ACC",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+    "vim.statusBarColors.surroundinputmode": "#007ACC",
 
     //  keybinding remapping (non-recursive)
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -50,9 +83,17 @@
         },
     ], 
 
-    //  --------- vscode system settings configuration --------
+    "vim.easymotion": true,
 
-    //  font size
+    // -------------- vscode settings configuration -----------
+
+
+    // open extensions sync
+    "settingsSync.ignoredExtensions": [
+        "mgwg.light-pink-theme"
+    ],
+
+    // font size
     "editor.fontSize": 20,
 
     //  enable mouseWheelZoom 
@@ -66,7 +107,7 @@
     //  background color for highlight of line at cursor position
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#000000",
-        "gitlens.trailingLineBackgroundColor":"#000000",
+        "gitlens.trailingLineBackgroundColor": "#000000",
         "gitlens.trailingLineForegroundColor": "#2bff00df",
         "editorHoverWidget.foreground": "#fff",
         "editorHoverWidget.border": "#00ffee9e",
@@ -75,16 +116,17 @@
         "editorSuggestWidget.focusHighlightForeground": "#0000ff",
         "editorSuggestWidget.selectedBackground": "#c9c2c2",
         "editorHoverWidget.highlightForeground": "#f60000",
+
+        // colors for status bar
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E",
+        "statusBar.debuggingForeground": "#434C5E"
     },
 
     //  terminal settings
     "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
-
-    //  file icon theme
-    "workbench.iconTheme": "material-icon-theme",
-
-    //  color theme
-    "workbench.colorTheme": "Gruvbox Dark Soft",
 
     //  --------- cmake configuration ----------
     "cmake.pinnedCommands": [
@@ -96,14 +138,24 @@
         "D:\\Development\\mingw64\\bin"
     ],
 
-    //  ---------- Power Mode configuration ----------
-    "powermode.shake.enabled": false,
+    // --------- powermode configuration --------------
+
     "powermode.enabled": true,
+
+    "powermode.shake.enabled": false,
+
     "powermode.presets": "particles",
-    "powermode.combo.location": "off",
+
     "powermode.explosions.offset": 0.25,
 
+    "powermode.combo.counterEnabled": "show",
+    
+    "powermode.combo.location": "default",
+
+    "powermode.combo.counterSize": 4,
+
     //  ------------- gitlens configuration -------------
+
     "gitlens.codeLens.scopes": [
         "containers",
         "blocks",
@@ -128,8 +180,8 @@
 
     //  -------------- live server configuration ------------
     "liveServer.settings.donotVerifyTags": true,
-    "custom-ui-style.external.imports": [
-        "file:///c:/Users/alexis/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
-    ],
-    "animations.Install-Method": "Custom UI Style",
+
+
 }
+
+

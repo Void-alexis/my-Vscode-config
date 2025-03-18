@@ -34,6 +34,7 @@
     },
     {
         "key": "alt+i",
-        "command": "workbench.view.extension.gitlensPanel"
-    }
+        "command": "workbench.view.extension.gitlensPanel",
+        "when": "editorFocus"
+    },
 ]
