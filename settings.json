@@ -21,9 +21,16 @@
     
     // set color for vim mode show in the status bar
     "custom-ui-style.stylesheet": {
-        "#vscodevim\\.vim\\.primary[aria-label=\"-- INSERT --\"]": "background-color: #98971a !important;",
-        "#vscodevim\\.vim\\.primary[aria-label=\"-- VISUAL --\"]": "background-color: #b16286 !important;",
-        "#vscodevim\\.vim\\.primary[aria-label^=\":\"]": "background-color: #7c6f64 !important;",
+        /* Apply styles based on aria-label in the footer */
+        "#vscodevim\\.vim\\.primary": "padding: 0 4px;",
+        "#vscodevim\\.vim\\.primary[aria-label='Already at oldest change']": "background-color: #475569; color: #d1d5db;",
+        "#vscodevim\\.vim\\.primary[aria-label^='-- NORMAL']": "background-color: #8FBCBB; color: #434C5E;",
+        "#vscodevim\\.vim\\.primary[aria-label='-- INSERT --']": "background-color: #BF616A; color: #e5e7eb;",
+        "#vscodevim\\.vim\\.primary[aria-label='-- VISUAL --'], #vscodevim\\.vim\\.primary[aria-label='-- VISUAL LINE --']": "background-color: #B48EAD; color: #e5e7eb;",
+        "#vscodevim\\.vim\\.primary[aria-label='-- VISUAL BLOCK --']": "background-color: #A3BE8C; color: #434C5E;",
+        "#vscodevim\\.vim\\.primary[aria-label='-- REPLACE --']": "background-color: #D08770; color: #434C5E;",
+        "#vscodevim\\.vim\\.primary[aria-label='-- EASYMOTION INPUT --'], #vscodevim\\.vim\\.primary[aria-label='-- SURROUND INPUT --']": "background-color: #007ACC; color: #e5e7eb;",
+        "#vscodevim\\.vim\\.primary[aria-label^=':'], #vscodevim\\.vim\\.showcmd": "color: #fafafa;"
     },
     //  ----------- background configuration ---------
     "background.editor": {
@@ -178,6 +185,7 @@
     },
 
 
+
     //  --------- cmake configuration ----------
     "cmake.pinnedCommands": [
         "workbench.action.tasks.configureTaskRunner",
@@ -230,6 +238,7 @@
 
     //  -------------- live server configuration ------------
     "liveServer.settings.donotVerifyTags": true,
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Propo Regular",
 
 
 }
