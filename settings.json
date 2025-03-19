@@ -19,6 +19,12 @@
         "file:///c:/Users/alexis/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
     ],
     
+    // set color for vim mode show in the status bar
+    "custom-ui-style.stylesheet": {
+        "#vscodevim\\.vim\\.primary[aria-label=\"-- INSERT --\"]": "background-color: #98971a !important;",
+        "#vscodevim\\.vim\\.primary[aria-label=\"-- VISUAL --\"]": "background-color: #b16286 !important;",
+        "#vscodevim\\.vim\\.primary[aria-label^=\":\"]": "background-color: #7c6f64 !important;",
+    },
     //  ----------- background configuration ---------
     "background.editor": {
         "useFront": true,
@@ -35,9 +41,77 @@
     },
 
     //  --------- vim configuration ------------
-    
+    /* 
+        @ In this section, I enable vim-easyMotion, vim-airline, vim-commentary, vim-indent-object, vim-sneak
 
-    // enable vim System Clipboard
+        Vim-camelCaseMotion:
+            [Usage]: <operator>i<leader>w	Select/change/delete/etc. the current camelCase or snake_case word segment
+            [Example]: d2i\w would delete the current and next camelCase word segment.
+
+        Vim-surround:
+            [Usage]: cs<existing><desired> the current word segment and add surrounding characters
+                     ds<existing>	Remove surrounding characters
+                     cs<existing>t<number> surrounding characters with <number></number>
+            [Example]:
+
+        Vim-sneak:
+            [Usage]: s<character>	Search for the next occurrence of <character> in the current line
+            [Example]: s<character> would search for the next occurrence of <character> in the current line.
+            [Trikes]: You can use this command to substitute the vim-command 'f' and 'F' for faster searching.
+
+        Vim-easyMotion:
+            [Usage]:    <leader><leader> s <char> search character in the current section that you can see from the editor
+                        <leader><leader> f <char> search character forwards
+                        <leader><leader> F <char> search character backwards
+                        <leader><leader> t <char> search character forwards and jump to the character before it
+                        <leader><leader> T <char> search character backwards and jump to the character after it
+                        <leader><leader> w <char> start of word forwards 
+                        <leader><leader> b <char> start of word backwards
+                        <leader><leader> e <char> end of word forwards
+                        <leader><leader> ge <char> end of word backwards
+                        <leader><leader> j <char> start of line forwards
+                        <leader><leader> k <char> start of line backwards
+                        <leader><leader> /<char>... search n-character
+                        <leader><leader><leader> j jump to anywhere, default behavior matches & ending of word, camelCase, after '_' and after '#'
+
+        Vim-commentary:
+            [Usage]: gc<space>	Comment the current line or selected lines
+                     gC<space>	Block Comment the current line or selected lines
+            [Trikes]: gcc to toggle line comment for the current line
+                      gc2j to toggle line comment for the current line and the next line
+                      gCi to comment out everything within parentheses
+
+        Vim-textobj-arguments:
+            [Usage]: <leader>i<textobj>	Select/change/delete/etc. the current text object
+            [Example]: 'cia' - change the argument under the cursor while preserving separators like ','
+                       'daa' - will delete the whole argument under the cursor and the separators if applicable
+            [Trikes]: you add number behind or before the <operator> to delete arguments with the same number 
+
+            
+        Vim.gdefault
+            [Make] :substitute command can toggle all matches in the current line
+            [Example]:    ':s/foo/bar/g '        
+                        when 'g' flag added, all match in the current line will be replaced
+                        when 'g' flag not added, only the first match in the current line will be replaced
+            More information about search and replace by using substitute command: https://www.baeldung.com/linux/vim-search-replace
+
+
+        [Trikes]:   gd - jump to definition
+                    gh - show hover equivalent ot hovering your mouse over wherever the cursor is 
+                    gb - to select the current word
+    */
+
+    
+    "vim.easymotion": true,
+
+    "vim.surround": true,
+
+    "vim.camelCaseMotion.enable": true,
+
+    "vim.sneak": true,
+
+    "vim.replaceWithRegister": true,
+
     "vim.useSystemClipboard": true,
     
     //  highlight matched text
@@ -49,27 +123,9 @@
     // set yanked color duration
     "vim.highlightedyank.duration": 250,
 
-    /*
-        make :substitute command can toggle all matches in the current line
-        Eg : ':s/foo/bar/g '
-        when 'g' flag added, all match in the current line will be replaced
-        when 'g' flag not added, only the first match in the current line will be replaced
-    */
+    // re-configure vim-command:substitute
     "vim.gdefault": true,
 
-    // set vim status bar color
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
-    "vim.statusBarColors.insert": "#BF616A",
-    "vim.statusBarColors.visual": "#B48EAD",
-    "vim.statusBarColors.visualline": "#B48EAD",
-    "vim.statusBarColors.visualblock": "#A3BE8C",
-    "vim.statusBarColors.replace": "#D08770",
-    "vim.statusBarColors.commandlineinprogress": "#007ACC",
-    "vim.statusBarColors.searchinprogressmode": "#007ACC",
-    "vim.statusBarColors.easymotionmode": "#007ACC",
-    "vim.statusBarColors.easymotioninputmode": "#007ACC",
-    "vim.statusBarColors.surroundinputmode": "#007ACC",
 
     //  keybinding remapping (non-recursive)
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -82,8 +138,6 @@
             "commands": ["workbench.action.nextEditor"]
         },
     ], 
-
-    "vim.easymotion": true,
 
     // -------------- vscode settings configuration -----------
 
@@ -116,17 +170,13 @@
         "editorSuggestWidget.focusHighlightForeground": "#0000ff",
         "editorSuggestWidget.selectedBackground": "#c9c2c2",
         "editorHoverWidget.highlightForeground": "#f60000",
+    }, 
 
-        // colors for status bar
-        "statusBar.background": "#8FBCBB",
-        "statusBar.noFolderBackground": "#8FBCBB",
-        "statusBar.debuggingBackground": "#8FBCBB",
-        "statusBar.foreground": "#434C5E",
-        "statusBar.debuggingForeground": "#434C5E"
+
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
     },
 
-    //  terminal settings
-    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
 
     //  --------- cmake configuration ----------
     "cmake.pinnedCommands": [
@@ -183,5 +233,4 @@
 
 
 }
-
 
