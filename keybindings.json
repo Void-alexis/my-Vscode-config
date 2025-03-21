@@ -47,4 +47,60 @@
         "command": "-editor.action.inlineSuggest.commit",
         "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     },
+    {
+        "key": "tab",
+        "command": "tabout",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !suggestWidgetVisible"
+    },
+    {
+        "key": "tab",
+        "command": "-tabout",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !inlineSuggestionVisible && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+alt+h",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "alt+n",
+        "command": "vscode-better-align.align",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "-vscode-better-align.align",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "editor.action.marker.prevInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+f8",
+        "command": "-editor.action.marker.prevInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
 ]

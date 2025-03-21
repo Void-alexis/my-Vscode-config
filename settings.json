@@ -7,6 +7,7 @@
         ==================================================
     */
 
+
     //  ------------ vscode animation effect configuration -----------
     "vscode_custom_css.imports": [
         "file:///C:/Users/alexis/.vscode/extensions/be5invis.vscode-custom-css-7.4.2/src/index.js"
@@ -38,10 +39,10 @@
         "style": {
             "background-position": "center",
             "background-size": "cover",
-            "opacity": 0.2
+            "opacity": 0.1
         },
         "images": [
-            "file:///D:/Users/wallpaper/selective-coloring-black-background-dark-background-simple-background-anime-girls-2238498-wallhere.com.jpg"
+            "file:///D:/Users/wallpaper/737474.png"
         ],
         "interval": 0,
         "random": false
@@ -154,6 +155,11 @@
         "mgwg.light-pink-theme"
     ],
 
+    "editor.wordWrap": "on",
+
+    // terminal font
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Propo Regular",
+
     // font size
     "editor.fontSize": 20,
 
@@ -199,18 +205,12 @@
     // --------- powermode configuration --------------
 
     "powermode.enabled": true,
-
     "powermode.shake.enabled": false,
-
     "powermode.presets": "particles",
-
     "powermode.explosions.offset": 0.25,
-
-    "powermode.combo.counterEnabled": "show",
-    
-    "powermode.combo.location": "default",
-
-    "powermode.combo.counterSize": 4,
+    "powermode.combo.counterEnabled": "hide",
+    "powermode.combo.location": "off",
+    "workbench.iconTheme": "vscode-icons-mac",
 
     //  ------------- gitlens configuration -------------
 
@@ -238,8 +238,22 @@
 
     //  -------------- live server configuration ------------
     "liveServer.settings.donotVerifyTags": true,
-    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Propo Regular",
 
+    "betterAlign.surroundSpace": {
+        "colon": [
+            1,
+            2
+        ],
+        "assignment": [
+            1,
+            2
+        ],
+        "arrow": [
+            1,
+            1
+        ],
+        "comment": 4
+    },
 
 }
 
