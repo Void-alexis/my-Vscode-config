@@ -109,6 +109,7 @@
                     gb - to select the current word
     */
 
+    "vim.leader": "<space>",
     
     "vim.easymotion": true,
 
@@ -135,7 +136,7 @@
     "vim.gdefault": true,
 
 
-    //  keybinding remapping (non-recursive)
+    //  keybinding remapping(non-recursive)
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-h>"],
@@ -144,6 +145,46 @@
         {
             "before": ["<C-l>"],
             "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<leader>", "s", "v"],
+            "after": [":", "v", "s", "<Enter>"]
+        },
+        {
+            "before": ["<leader>", "s", "p"],
+            "after": [":", "s", "p", "<Enter>"]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "after": ["<C-w>", "k"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": ["<C-w>", "h"]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": ["<C-w>", "l"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["1", "0", "j"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["1", "0", "k"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
         },
     ], 
 
@@ -210,7 +251,6 @@
     "powermode.explosions.offset": 0.25,
     "powermode.combo.counterEnabled": "hide",
     "powermode.combo.location": "off",
-    "workbench.iconTheme": "vscode-icons-mac",
 
     //  ------------- gitlens configuration -------------
 
@@ -239,6 +279,7 @@
     //  -------------- live server configuration ------------
     "liveServer.settings.donotVerifyTags": true,
 
+    // --------------- betterAlign configuration -------------
     "betterAlign.surroundSpace": {
         "colon": [
             1,
@@ -254,6 +295,15 @@
         ],
         "comment": 4
     },
+
+    // -------------- icon theme configuration -------------
+    "workbench.iconTheme": "vscode-icons-mac",
+
+    // -------------- java configuation -------------------
+
+    // set java home path
+    "java.jdt.ls.java.home": "D:/Development/JDKS/jdk-21.0.6",
+    "redhat.telemetry.enabled": false,
 
 }
 

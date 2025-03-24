@@ -103,4 +103,9 @@
         "command": "-editor.action.marker.nextInFiles",
         "when": "editorFocus"
     },
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.debug.action.showDebugHover",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }
 ]
